@@ -1,0 +1,44 @@
+.cta {
+    background-color: var(--color-primary);
+    padding: var(--spacing-4xl) var(--container-padding);
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    font-size: var(--font-size-3xl);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-md);
+}
+
+.description {
+    font-size: var(--font-size-lg);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Sobrescrevendo estilos do botão para melhor contraste neste fundo */
+.cta :global(.button) {
+    background: var(--color-white) !important;
+    color: var(--color-primary) !important;
+    border: none !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.cta :global(.button):hover {
+    background: var(--color-secondary) !important;
+    color: var(--color-primary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .title {
+        font-size: var(--font-size-2xl);
+    }
+}

@@ -1,0 +1,124 @@
+.services {
+    padding-top: var(--navbar-height);
+}
+
+
+/* ===================================
+   SERVICES LIST
+   =================================== */
+
+.servicesList {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--spacing-4xl) var(--container-padding);
+}
+
+.serviceItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-4xl);
+    align-items: center;
+    padding: var(--spacing-3xl) 0;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.serviceItem:last-child {
+    border-bottom: none;
+}
+
+.serviceItem.reverse {
+    direction: rtl;
+}
+
+.serviceItem.reverse>* {
+    direction: ltr;
+}
+
+.serviceImage {
+    display: flex;
+    justify-content: center;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 4/3;
+    background-color: var(--color-black);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageIcon {
+    font-size: 5rem;
+    opacity: 0.5;
+}
+
+.serviceContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceTitle {
+    font-size: var(--font-size-3xl);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-md);
+}
+
+.serviceDescription {
+    font-size: var(--font-size-base);
+    color: var(--color-gray-500);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-xl);
+}
+
+.featuresList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-700);
+}
+
+.featureIcon {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+/* ===================================
+   RESPONSIVO
+   =================================== */
+
+@media (max-width: 768px) {
+    .serviceItem {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .serviceItem.reverse {
+        direction: ltr;
+    }
+
+    .serviceImage {
+        order: -1;
+    }
+
+    .imagePlaceholder {
+        max-width: 100%;
+    }
+
+    .serviceContent {
+        text-align: center;
+    }
+
+    .featureItem {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,171 @@
+.about {
+    padding-top: var(--navbar-height);
+}
+
+/* ===================================
+   PROFILE SECTION
+   =================================== */
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-4xl);
+    align-items: center;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--spacing-4xl) var(--container-padding);
+}
+
+.profileImage {
+    display: flex;
+    justify-content: center;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3/4;
+    background-color: var(--color-black);
+    border-radius: var(--radius-lg);
+    position: relative;
+}
+
+.imagePlaceholder::after {
+    content: 'Foto de Leticia';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-gray-500);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.profileContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileTitle {
+    font-size: var(--font-size-3xl);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-xs);
+}
+
+.profileRole {
+    display: inline-block;
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-xl);
+}
+
+.profileText {
+    font-size: var(--font-size-base);
+    color: var(--color-gray-500);
+    line-height: var(--line-height-relaxed);
+}
+
+/* ===================================
+   REASONS SECTION
+   =================================== */
+
+.reasons {
+    background-color: var(--color-secondary-light);
+    padding: var(--spacing-4xl) var(--container-padding);
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.sectionTitle {
+    font-size: var(--font-size-4xl);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-md);
+}
+
+.sectionDescription {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-500);
+    margin: 0;
+}
+
+.reasonsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.reasonCard {
+    background-color: var(--color-white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.reasonCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.reasonNumber {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-secondary-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.reasonTitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-sm);
+}
+
+.reasonDescription {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+}
+
+/* ===================================
+   RESPONSIVO
+   =================================== */
+
+@media (max-width: 1024px) {
+    .reasonsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .profile {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .profileImage {
+        order: -1;
+    }
+
+    .imagePlaceholder {
+        max-width: 300px;
+    }
+
+    .profileContent {
+        text-align: center;
+    }
+
+    .reasonsGrid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
