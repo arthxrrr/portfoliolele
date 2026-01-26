@@ -37,9 +37,9 @@ function Home() {
                         <span className={styles.highlight}> estilo de viver</span>
                     </h1>
                     <p className={styles.heroDescription}>
-                        Criamos projetos personalizados, unindo estética, funcionalidade e conforto para transformar cada ambiente em um espaço único.
+                        Crio projetos personalizados, unindo estética, funcionalidade e conforto para transformar cada ambiente em um espaço único.
                         <br /><br />
-                        📍 Joinville / SC
+                        Joinville / SC
                     </p>
                     <div className={styles.heroActions}>
                         <Link to="/contato">
