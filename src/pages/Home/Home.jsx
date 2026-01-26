@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 import CTA from '../../components/CTA';
 import styles from './Home.module.css';
+import heroImage from '/leleinicio.jpeg';
 
 const SERVICES_PREVIEW = [
     {
@@ -32,12 +33,13 @@ function Home() {
                 <div className={styles.heroContent}>
                     <span className={styles.heroTag}>Design de Interiores</span>
                     <h1 className={styles.heroTitle}>
-                        Escritório de Design de Interiores em
-                        <span className={styles.highlight}> Joinville/SC</span>
+                        Design de interiores que traduz seu
+                        <span className={styles.highlight}> estilo de viver</span>
                     </h1>
                     <p className={styles.heroDescription}>
-                        leticia ablalblagwijgwji0gi0wgw leticia iu9wgwgwig0wgnwgikwg
-                        wgiwipg
+                        Criamos projetos personalizados, unindo estética, funcionalidade e conforto para transformar cada ambiente em um espaço único.
+                        <br /><br />
+                        📍 Joinville / SC
                     </p>
                     <div className={styles.heroActions}>
                         <Link to="/contato">
@@ -53,7 +55,11 @@ function Home() {
                     </div>
                 </div>
                 <div className={styles.heroImage}>
-                    <div className={styles.imagePlaceholder} aria-label="Imagem de projeto de interiores" />
+                    <img
+                        src={heroImage}
+                        alt="Leticia Wurges - Designer de Interiores"
+                        className={styles.heroImg}
+                    />
                 </div>
             </section>
 

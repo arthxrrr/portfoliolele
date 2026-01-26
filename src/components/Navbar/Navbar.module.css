@@ -37,25 +37,10 @@
     opacity: 0.8;
 }
 
-.logoText {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    font-family: var(--font-heading);
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
-    border-radius: var(--radius-sm);
-}
-
-.logoFull {
-    font-family: var(--font-heading);
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-black);
+.logoImage {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Links Desktop */

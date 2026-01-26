@@ -21,25 +21,13 @@
     justify-content: center;
 }
 
-.imagePlaceholder {
+.profileImg {
     width: 100%;
     max-width: 400px;
     aspect-ratio: 3/4;
-    background-color: var(--color-black);
+    object-fit: cover;
     border-radius: var(--radius-lg);
-    position: relative;
-}
-
-.imagePlaceholder::after {
-    content: 'Foto de Leticia';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--color-gray-500);
-    font-size: var(--font-size-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    box-shadow: var(--shadow-xl);
 }
 
 .profileContent {

@@ -1,5 +1,6 @@
 import PageHeader from '../../components/PageHeader';
 import styles from './About.module.css';
+import profileImage from '/lelesobre.jpeg';
 
 const REASONS = [
     {
@@ -47,7 +48,11 @@ function About() {
             {/* Seção Perfil */}
             <section className={styles.profile}>
                 <div className={styles.profileImage}>
-                    <div className={styles.imagePlaceholder} aria-label="Foto de Leticia Wurges" />
+                    <img
+                        src={profileImage}
+                        alt="Leticia Wurges - Designer de Interiores"
+                        className={styles.profileImg}
+                    />
                 </div>
                 <div className={styles.profileContent}>
                     <h2 className={styles.profileTitle}>Leticia Wurges</h2>

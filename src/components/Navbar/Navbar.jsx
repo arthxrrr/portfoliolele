@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
+import logoImg from '/logo.png';
 
 const NAV_LINKS = [
     { path: '/', label: 'Home' },
@@ -39,8 +40,7 @@ function Navbar() {
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <nav className={styles.nav} aria-label="Navegação principal">
                 <NavLink to="/" className={styles.logo} aria-label="Leticia Wurges - Ir para página inicial">
-                    <span className={styles.logoText}>LW</span>
-                    <span className={styles.logoFull}>Leticia Wurges</span>
+                    <img src={logoImg} alt="Leticia Wurges" className={styles.logoImage} />
                 </NavLink>
 
                 {/* Menu Desktop */}
